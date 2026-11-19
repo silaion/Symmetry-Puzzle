@@ -26,6 +26,8 @@ npm run preview  # 빌드 결과 로컬 프리뷰 (/symmetry-Puzzle/)
 ```
 
 ## Cloudflare Pages 배포
-- **Build command:** `npm run build`
+- **설정 파일:** `wrangler.jsonc` (`pages_build_output_dir: "./dist"`)
+- **Build command:** `npm run build` (`dist/symmetry-Puzzle/` + 루트 `_redirects`, `_headers`, `index.html` 자동 생성)
 - **Build output directory:** `dist`
 - **Subpath:** `/symmetry-Puzzle/` (`vite.config.ts`의 `base` 및 `public/_redirects` 설정 포함)
+- **즉시 배포:** `npm run deploy` (`wrangler pages deploy dist --project-name=symmetry-puzzle`)
