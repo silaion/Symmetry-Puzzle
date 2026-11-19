@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/symmetry-Puzzle/',
+  base: '/symmetry-puzzle/',
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: 'dist/symmetry-Puzzle',
+    outDir: 'dist/symmetry-puzzle',
     emptyOutDir: true,
   },
 });

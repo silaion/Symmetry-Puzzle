@@ -22,12 +22,12 @@ npm install
 npm run dev      # 개발 서버 실행
 npm test         # Vitest 단위 테스트 실행
 npm run build    # TypeScript 검사 및 프로덕션 빌드
-npm run preview  # 빌드 결과 로컬 프리뷰 (/symmetry-Puzzle/)
+npm run preview  # 빌드 결과 로컬 프리뷰 (/symmetry-puzzle/)
 ```
 
 ## Cloudflare 배포 (Workers Assets)
 - **설정 파일:** `wrangler.jsonc` (`assets.directory: "./dist"`, `not_found_handling: "single-page-application"`)
-- **Build command:** `npm run build` (`dist/symmetry-Puzzle/` + 루트 `_headers`, `index.html` 자동 생성)
+- **Build command:** `npm run build` (`dist/symmetry-puzzle/` + 루트 `_headers`, `index.html` 자동 생성)
 - **Build output directory:** `dist`
-- **Subpath:** `/symmetry-Puzzle/` (`vite.config.ts`의 `base` 설정 포함)
+- **Subpath:** `/symmetry-puzzle/` (`vite.config.ts`의 `base` 설정 포함)
 - **즉시 배포:** `npm run deploy` (`wrangler deploy`)
