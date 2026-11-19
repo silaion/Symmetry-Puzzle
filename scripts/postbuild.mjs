@@ -4,8 +4,8 @@ import path from 'node:path';
 const distRoot = path.resolve('dist');
 const subDir = path.join(distRoot, 'symmetry-Puzzle');
 
-// Move Cloudflare Pages root config files (_redirects, _headers) from dist/symmetry-Puzzle/ to dist/
-for (const fileName of ['_redirects', '_headers']) {
+// Move Cloudflare Pages root config files (_headers) from dist/symmetry-Puzzle/ to dist/
+for (const fileName of ['_headers']) {
   const src = path.join(subDir, fileName);
   const dest = path.join(distRoot, fileName);
   if (fs.existsSync(src)) {
@@ -30,4 +30,4 @@ const rootIndexHtml = `<!doctype html>
 `;
 
 fs.writeFileSync(path.join(distRoot, 'index.html'), rootIndexHtml, 'utf8');
-console.log('[postbuild] Prepared dist/ root (_redirects, _headers, index.html) and dist/symmetry-Puzzle/.');
+console.log('[postbuild] Prepared dist/ root (_headers, index.html) and dist/symmetry-Puzzle/.');
